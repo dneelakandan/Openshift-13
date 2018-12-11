@@ -1,7 +1,7 @@
 === Openshift Basic Commands
 
 
-. ]$ cat username-projectname-rc
+. ]$ cat <username>-<projectname>-rc
 
     export OS_AUTH_URL=http://172.25.250.50:5000/v3 
     export OS_IDENTITY_API_VERSION=3
@@ -11,7 +11,8 @@
     export OS_USERNAME=<user nanme>
     export OS_PASSWORD=<password>
     export OS_USER_DOMAIN_NAME=Default
-
+    
+. ]$ source  <username>-<projectname>-rc
 . ]$ openstack help project show
 
 . ]$ openstack project show <project name>
