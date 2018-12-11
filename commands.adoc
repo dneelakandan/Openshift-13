@@ -1,0 +1,49 @@
+=== Openshift Basic Commands
+
+
+. ]$ cat username-projectname-rc
+
+    export OS_AUTH_URL=http://172.25.250.50:5000/v3 
+    export OS_IDENTITY_API_VERSION=3
+    export OS_PROJECT_DOMAIN_NAME=Default 
+    export OS_REGION_NAME=regionOne
+    export OS_PROJECT_NAME=<project nane>
+    export OS_USERNAME=<user nanme>
+    export OS_PASSWORD=<password>
+    export OS_USER_DOMAIN_NAME=Default
+
+. ]$ openstack help project show
+
+. ]$ openstack project show <project name>
+
+. ]$ openstack help user show
+
+. ]$ openstack user show <user name>
+
+. ]$ openstack help flavor list
+
+. ]$ openstack flavor list
+
+. ]$ openstack flavor show default
+
+. ]$ openstack image list
+
+. ]$ openstack help server
+
+. ]$ openstack server list -f json
+
+. ]$ openstack server show <instance name>
+
+. ]$ openstack server create --image rhel7 --flavor default --nic net-id=<network name> --wait <instance name>
+
+. ]$ openstack console log show  <instance name>
+
+. ]$ openstack console url show  <instance name>
+
+. ]$ openstack server stop <instance name>
+
+. ]$ openstack server delete <instance name>
+
+
+
+
