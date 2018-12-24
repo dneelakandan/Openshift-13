@@ -11,7 +11,7 @@
     export OS_USERNAME=<user nanme>
     export OS_PASSWORD=<password>
     export OS_USER_DOMAIN_NAME=Default
-    
+
 . ]$ source  <username>-<projectname>-rc
 . ]$ openstack help project show
 
@@ -46,5 +46,29 @@
 . ]$ openstack server delete <instance name>
 
 
+=== Creating Project, Group, User and Adding role to user
+  
+. ]$ openstack project create --description <project description> --domain <domain-name>  <project name>
 
+    As Admin of the project
+
+. ]$ openstack group create --domain <domain name> <group name>
+
+. ]$ openstack user create --project <project name> --password-prompt <user name>
+
+. ]$ openstack group add user
+
+. ]$ openstack group contains user
+
+. ] $ openstack user set --disable demouser
+
+. ]$ openstack user delete <user name>
+
+. ]$ openstack token issue
+
+. ]$ openstack user create
+
+. ]$ openstack user create --project <project name> --password <password> --email <user@id.com>  <user name>
+
+. ]$ openstack role add --project <project name> --user <user name> <role_name>
 
